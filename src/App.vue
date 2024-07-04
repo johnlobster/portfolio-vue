@@ -1,47 +1,68 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Header from './components/Header/Header.vue'
+import AboutPage from './components/AboutPage/AboutPage.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
+  <Header />
   <main>
-    <TheWelcome />
+    <AboutPage />
   </main>
 </template>
 
 <style scoped>
+
+main {
+  background-color: #FFFFF0;
+}
+body {
+  background-image: url(./images/blueBackground.jpg);
+  background-repeat: repeat;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+h3,
+h4,
+h5 {
+  font-weight: bold;
+}
 header {
   line-height: 1.5;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
+
+<!-- @media (min-width: 1024px) {
+header {
+display: flex;
+place-items: center;
+padding-right: calc(var(--section-gap) / 2);
+}
+
+.logo {
+margin: 0 2rem 0 0;
+}
+
+header .wrapper {
+display: flex;
+place-items: flex-start;
+flex-wrap: wrap;
+}
+}
+ -->
